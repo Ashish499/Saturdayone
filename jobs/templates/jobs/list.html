@@ -1,0 +1,16 @@
+<html>
+
+   <h1> Hello World </h1>
+
+      {%if jobs %}
+      {%for job in object_list%}
+
+    <li>
+        <a href="{% url 'jobs:detail' job.id%}"> {{job.title}} </a>
+    </li>
+      {%endfor%}
+      {%else%}
+<h1> no jobs</h1>
+{%endif%}
+
+</html>
